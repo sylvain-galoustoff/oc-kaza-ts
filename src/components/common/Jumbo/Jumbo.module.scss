@@ -1,0 +1,39 @@
+@import "../../../styles/vars.scss";
+
+#jumbo {
+  height: 110px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $radius;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.layer {
+  @include layer;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#slogan {
+  color: $white;
+  font-size: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  #jumbo {
+    height: 223px;
+
+  }
+
+  .layer {
+    justify-content: center;
+  }
+
+  #slogan {
+    font-size: 48px;
+  }
+}

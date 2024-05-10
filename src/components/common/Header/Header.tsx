@@ -5,7 +5,7 @@ import style from "./header.module.scss";
 function Header() {
   return (
     <header>
-      <div className={style.container}>
+      <div className={`container ${style.container}`}>
         <div id={style.logo}>
           <Link to="/">
             <img className="responsive" src={logo} alt="Logo Kasa" />
