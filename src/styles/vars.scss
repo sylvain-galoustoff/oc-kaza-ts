@@ -1,0 +1,22 @@
+$white: #fff;
+$black: #000;
+$primary: #FF6060;
+$background: #F6F6F6;
+$radius: 10px;
+
+@mixin dev($width: 1px, $color: red) {
+  border: $width solid $color;
+}
+
+@mixin layer($backgroundColor: $black) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($backgroundColor, .6);
+}
+
+@mixin trans($target: all, $time: .2s, $ease: ease-out) {
+  transition: $target $time $ease;
+}
