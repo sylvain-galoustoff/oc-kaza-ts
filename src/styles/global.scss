@@ -37,6 +37,14 @@ h2 {
   font-weight: 700;
 }
 
+a {
+  text-decoration: none;
+
+  &.active {
+    text-decoration: underline;
+  }
+}
+
 .page {
   flex: 1;
 }

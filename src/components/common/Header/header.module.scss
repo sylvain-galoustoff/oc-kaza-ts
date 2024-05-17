@@ -1,7 +1,7 @@
 @import "../../../styles/vars.scss";
 
-header {
-  margin-bottom: 20px;
+#header {
+  margin-bottom: 30px;
 }
 
 .container {
@@ -12,7 +12,7 @@ header {
   width: 145px;
 }
 
-nav {
+#navigation {
   flex: 1;
 
   ul {
@@ -23,17 +23,14 @@ nav {
     align-items: center;
     gap: 25px;
 
-    a {
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 500;
-      color: $black;
-
-      &.active {
-        text-decoration: underline;
-      }
-    }
   }
+
+  a {
+    font-size: 12px;
+    font-weight: 500;
+    color: $black;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {

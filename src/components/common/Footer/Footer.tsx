@@ -3,7 +3,7 @@ import style from "./footer.module.scss";
 
 function Footer() {
   return (
-    <footer>
+    <footer id={style.footer}>
       <div className={style.container}>
         <div id={style.footerLogo}>
           <img src={logo} alt="Logo casa blanc" className="responsive" />
