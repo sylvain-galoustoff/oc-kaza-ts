@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import logements from "../../../data/logements";
 import Slider from "./Slider/Slider";
 import { LogementType } from "../../../data/LogementType";
+import Tag from "./Tag/Tag";
+import Rating from "./Rating/Ratinng";
 import style from "./Logement.module.scss";
 
 function Logement() {
@@ -38,9 +40,24 @@ function Logement() {
     }
   }, [params]);
 
+  const renderTags = logement.tags.map((tag) => <Tag key={tag} label={tag} />);
+
   return (
     <div className="page container" id={style.logement}>
       <Slider pictures={logement.pictures} />
+
+      <div id={style.logementHeader}>
+        <div id={style.logementData}>
+          <h1 className={style.title}>{logement.title}</h1>
+          <p className={style.location}>{logement.location}</p>
+          <div id={style.tags}>{renderTags}</div>
+        </div>
+
+        <div id={style.hostData}>
+          <Rating rate={logement.rating} />
+          {/* <HostCard host={logement.host} /> */}
+        </div>
+      </div>
     </div>
   );
 }
