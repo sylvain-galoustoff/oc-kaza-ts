@@ -6,6 +6,7 @@ import { LogementType } from "../../../data/LogementType";
 import Tag from "./Tag/Tag";
 import Rating from "./Rating/Rating";
 import HostCard from "./HostCard/HostCard";
+import Dropdown from "../../common/Dropdown/Dropdown";
 import style from "./Logement.module.scss";
 
 function Logement() {
@@ -57,6 +58,11 @@ function Logement() {
           <Rating rate={Number(logement.rating)} />
           <HostCard host={logement.host} />
         </div>
+      </div>
+
+      <div id={style.logementBody}>
+        <Dropdown label="description" data={logement.description} />
+        <Dropdown label="équipements" data={logement.equipments} />
       </div>
     </div>
   );
