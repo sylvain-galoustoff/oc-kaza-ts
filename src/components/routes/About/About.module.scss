@@ -1,0 +1,25 @@
+#logementBody {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  #logementBody {
+    flex-direction: row;
+    gap: 40px;
+
+    .dropdown {
+      flex: 1;
+    }
+  }
+
+  #about {
+    #logementBody {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+  }
+}
