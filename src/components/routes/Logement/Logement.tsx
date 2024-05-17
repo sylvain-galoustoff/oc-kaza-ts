@@ -4,7 +4,8 @@ import logements from "../../../data/logements";
 import Slider from "./Slider/Slider";
 import { LogementType } from "../../../data/LogementType";
 import Tag from "./Tag/Tag";
-import Rating from "./Rating/Ratinng";
+import Rating from "./Rating/Rating";
+import HostCard from "./HostCard/HostCard";
 import style from "./Logement.module.scss";
 
 function Logement() {
@@ -29,7 +30,6 @@ function Logement() {
     const currentLogement = logements.filter(
       (logement) => logement.id === params.id
     );
-    console.log(currentLogement);
 
     if (!currentLogement.length) {
       console.error("Aucun logement avec l'id " + params.id);
@@ -54,8 +54,8 @@ function Logement() {
         </div>
 
         <div id={style.hostData}>
-          <Rating rate={logement.rating} />
-          {/* <HostCard host={logement.host} /> */}
+          <Rating rate={Number(logement.rating)} />
+          <HostCard host={logement.host} />
         </div>
       </div>
     </div>
