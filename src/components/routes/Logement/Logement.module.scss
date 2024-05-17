@@ -1,0 +1,142 @@
+@import "../../../styles/vars.scss";
+
+#logement {
+  .title {
+    font-size: 18px;
+    font-weight: 500;
+    color: $primary;
+  }
+
+  .location {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+#logement-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#logement-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px
+}
+
+.tag {
+  background-color: $primary;
+  color: $white;
+  padding: 5px;
+  width: auto;
+  border-radius: $radius;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#host-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#rating {
+  display: flex;
+}
+
+#host-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.name {
+  font-size: 12px;
+  color: $primary;
+  text-align: right;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#logement-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+
+  #logement-header {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  #host-data {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  #rating {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  #logement {
+    .title {
+      font-size: 36px;
+    }
+
+    .location {
+      font-size: 18px;
+    }
+  }
+
+  .tag {
+    height: 25px;
+    font-size: 14px;
+  }
+
+  #logement-body {
+    flex-direction: row;
+    gap: 40px;
+
+    .dropdown {
+      flex: 1;
+    }
+  }
+
+  #about {
+    #logement-body {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+  }
+}
