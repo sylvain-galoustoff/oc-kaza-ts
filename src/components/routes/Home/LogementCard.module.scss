@@ -1,8 +1,8 @@
 @import "../../../styles/vars.scss";
 
 #logementsList {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
 
@@ -35,6 +35,14 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  #logementsList {
+    background-color: $background;
+    padding: 40px;
+    gap: 40px;
+    border-radius: 25px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .card {
     height: 340px;
     width: 100%;
